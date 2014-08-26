@@ -20,6 +20,8 @@ angular.module('CMApp.controllers', [])
       $scope.dbStageClasses[$scope.dbStage] = '';
       $scope.dbStage = new_db_stage;
       $scope.dbStageClasses[new_db_stage] = 'active';
+
+      $scope.status.isopen = false;
     };
 
   }]).controller('CMMerchantController', ['$scope', function($scope) {
