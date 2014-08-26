@@ -2,12 +2,60 @@
 <html ng-app="CMApp">  
   <head>
     <title>Wisely Command Center</title>
+
+    <!-- CSS Imports -->
+    <!-- Bootstrap Core CSS -->
+    <link href="sb-admin/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="sb-admin/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="sb-admin/css/plugins/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="sb-admin/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="sb-admin/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="sb-admin/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
   </head>
 
   <body>
 
-    <div ng-view></div>
+    <div id="wrapper">
 
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <!-- TODO (migchez): Add wisely logo -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Wisely Command Center</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                          <a class="active" href="/#/dedup"><i class="fa fa-dashboard fa-fw"></i>Deduplication</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <!-- Inner view based on navigation tab -->
+        <div ng-view id="page-wrapper"></div>
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- JS Imports -->
     <!-- Angular -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <script src="//code.angularjs.org/1.2.23/angular-route.min.js"></script>
