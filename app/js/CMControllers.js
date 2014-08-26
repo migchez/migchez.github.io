@@ -3,6 +3,10 @@
 /* Controllers */
 
 angular.module('CMApp.controllers', [])
-  .controller('CMDeduplicationController', ['$scope', function($scope) {
-    $scope.for_testing = 'Hola Mundo';
+  .controller('CMNavController', ['$scope', function ($scope) {
+    $scope.tabClasses = {
+      'merchant' : 'active'
+    };
+  }]).controller('CMMerchantController', ['$scope', function($scope) {
+
   }]);

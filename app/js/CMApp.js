@@ -5,8 +5,8 @@ angular.module('CMApp', [
     'CMApp.controllers'
   ])
   .config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/dedup', {
-      templateUrl: 'partials/dedup_partial.html',
-      controller: 'CMDeduplicationController'
-    }).otherwise({ redirectTo: '/dedup' });
+    $routeProvider.when('/merchant', {
+      templateUrl: 'partials/merchant_partial.html',
+      controller: 'CMMerchantController'
+    }).otherwise({ redirectTo: '/merchant' });
 }])

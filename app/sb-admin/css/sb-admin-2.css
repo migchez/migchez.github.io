@@ -40,6 +40,11 @@ body {
     min-height: 50px;
 }
 
+.navbar-top-links p {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
 .navbar-top-links .dropdown-menu li {
     display: block;
 }
