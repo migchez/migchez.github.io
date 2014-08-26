@@ -3,3 +3,16 @@
 .sidebar ul li a i {
     margin-right: 5px;
 }
+
+.navbar-right {
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.dropdown-menu a.active {
+    background-color: #eee;
+}
+
+
+/* Bootstrap Angular Required CSS */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }

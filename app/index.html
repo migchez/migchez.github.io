@@ -38,7 +38,19 @@
             </div>
             <!-- /.navbar-header -->
 
-            <!-- TODO (migchez): Add ability to set database stage -->
+            <!-- TODO (migchez): Remove that annoying space for active tab CSS and add some styling -->
+            <div class="btn-group nav navbar-top-links navbar-right" dropdown is-open="status.isopen">
+              <button type="button" class="btn btn-primary dropdown-toggle">
+                <i class="fa fa-database fa-fw"></i>
+                {{dbStage}} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <!-- TODO (migchez): Clean up view model interaction -->
+                <li><a class="{{dbStageClasses.Test}}" ng-click="dbStageUpdated('Test')"><i class="fa fa-smile-o fa-fw"></i> Test</a></li>
+                <li><a class="{{dbStageClasses.Staging}}" ng-click="dbStageUpdated('Staging')"><i class="fa fa-meh-o fa-fw"></i> Staging</a></li>
+                <li><a class="{{dbStageClasses.Prod}}" ng-click="dbStageUpdated('Prod')"><i class="fa fa-frown-o fa-fw"></i> Prod</a></li>
+              </ul>
+            </div>
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -65,6 +77,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <script src="//code.angularjs.org/1.2.23/angular-route.min.js"></script>
     
+    <!-- Bootstrap Angular -->
+    <script src="bootstrap-angular/ui-bootstrap-0.11.0.min.js"></script>
+
     <!-- Application JS -->
     <script src="js/CMApp.js"></script>
     <script src="js/CMControllers.js"></script>

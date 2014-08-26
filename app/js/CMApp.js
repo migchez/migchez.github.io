@@ -2,6 +2,7 @@
 
 angular.module('CMApp', [
     'ngRoute',
+    'ui.bootstrap',
     'CMApp.controllers'
   ])
   .config(['$routeProvider', function ($routeProvider) {
