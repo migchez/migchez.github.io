@@ -13,5 +13,13 @@
     background-color: #eee;
 }
 
+.merchant-check {
+  padding-top: 10px;
+}
+
+#merchant-checkbox {
+  margin-right: 5px;
+}
+
 /* Bootstrap Angular Required CSS */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
