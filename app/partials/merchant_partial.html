@@ -48,6 +48,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <tr ng-repeat="merchant in merchants">
+                                <td><input type="checkbox"></td>
+                                <td>{{ merchant.name }}</td>
+                                <td>{{ merchant.address }}</td>
+                                <td>{{ merchant.city }}</td>
+                                <td>{{ merchant.state }}</td>
+                                <td>{{ merchant.has_ll }}</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
