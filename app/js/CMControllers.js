@@ -34,7 +34,7 @@ angular.module('CMApp.controllers', [])
       $scope.status.isopen = false;
     };
 
-  }]).controller('CMMerchantController', ['$scope', function($scope) {
+  }]).controller('CMMerchantController', ['$scope', '$http', function($scope, $http) {
 
       /**
         searchText : String
@@ -45,7 +45,22 @@ angular.module('CMApp.controllers', [])
 
       }
 
-      
+      function fetchMerchants(searchText) {
+        $http.defaults.headers.common = {
+          'username' : 'miguelsanchez',
+          'pass'     : 'cabrerawho?'
+        };
+
+        // $http({method: 'GET', 'http://nschwab.wisely.io/v1/admin/merchant/search?query=Babo Market&is_like=0').success(
+        //   function (data) {
+        //     console.log(data);
+        //   }
+        // );
+
+        $http.jsonp('http://nschwab.wisely.io/v1/admin/merchant/search?query=Babo Market&is_like=0');
+      }
+
+      fetchMerchants("Babo");
   }]);
 
 
