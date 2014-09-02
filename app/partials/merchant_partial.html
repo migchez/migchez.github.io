@@ -21,7 +21,12 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="input-group merchant merchant-search">
-                    <input type="text" class="form-control" placeholder="Enter Merchant Name (case sensitive) or id" value="">
+                    <input type="text" 
+                           class="form-control" 
+                           placeholder="Enter Merchant Name (case sensitive) or id" 
+                           value="" 
+                           ng-change="searchTextChanged()"
+                           ng-model="searchText">
                     <span class="input-group-btn">
                         <button class="btn btn-default" type="button">Search</button>
                     </span>

@@ -36,11 +36,34 @@ angular.module('CMApp.controllers', [])
 
   }]).controller('CMMerchantController', ['$scope', function($scope) {
 
-      $scope.merchants = [
-        merchant('Test', '514 Kickerillo', 'Houston', 'TX', true),
-        merchant('Test', '514 Kickerillo', 'Houston', 'TX', true),
-        merchant('Test', '514 Kickerillo', 'Houston', 'TX', true),
-      ];
+      /**
+        searchText : String
+        updated whenever the user changes the merchant search string    
+       */
+      $scope.searchText = "";
+      $scope.searchTextChanged = function (searchText) {
+
+      }
+
+      
   }]);
 
-// 29001460400
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
